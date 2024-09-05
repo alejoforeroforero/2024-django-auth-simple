@@ -159,7 +159,8 @@ SIMPLE_JWT = {
 
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",  # Your React app's URL
+    "http://localhost:5173", 
+     "http://68.183.136.243:5173",
 ]
 
 AUTH_USER_MODEL = 'credentials.CustomUser'
