@@ -41,7 +41,7 @@ class RegisterView(APIView):
                 str(refresh),
                 httponly=True,
                 samesite='Strict',
-                secure=True,
+                secure=False,
                 max_age=24 * 60 * 60
             )
             return response
@@ -113,7 +113,7 @@ class CustomTokenObtainPairView(TokenObtainPairView):
                 refresh_token,
                 httponly=True,
                 samesite='Strict',
-                secure=True,
+                secure=False,
                 max_age=24 * 60 * 60
             )
             del response.data['refresh']
@@ -123,7 +123,7 @@ class CustomTokenObtainPairView(TokenObtainPairView):
                 'access_token',
                 access_token,
                 samesite='Strict',
-                secure=True,
+                secure=False,
                 max_age=5 * 60
             )
         return response
@@ -143,7 +143,7 @@ class CustomTokenRefreshView(TokenRefreshView):
                     new_refresh_token,
                     httponly=True,
                     samesite='Strict',
-                    secure=True,  # set to True if using HTTPS
+                    secure=False,  # set to True if using HTTPS
                     max_age=24 * 60 * 60  # 1 day in seconds
                 )
                 # Remove new refresh token from response body
