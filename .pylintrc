@@ -1,0 +1,2 @@
+extension-pkg-whitelist=rest_framework_simplejwt
+load-plugins=pylint_django
