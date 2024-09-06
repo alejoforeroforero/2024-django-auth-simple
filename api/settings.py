@@ -178,3 +178,4 @@ CSRF_TRUSTED_ORIGINS = [
     "https://cocinasitinerantes.com",
     "https://www.cocinasitinerantes.com",
 ]
+
