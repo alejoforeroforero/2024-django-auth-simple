@@ -1,4 +1,5 @@
 
+from datetime import timedelta
 import os
 from dotenv import load_dotenv
 from pathlib import Path
@@ -127,8 +128,6 @@ REST_FRAMEWORK = {
 }
 
 
-from datetime import timedelta
-
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
@@ -159,9 +158,10 @@ SIMPLE_JWT = {
 
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173", 
-     "http://68.183.136.243:5173",
-     "https://cocinasitinerantes.com",
+    "http://localhost:5173",
+    "http://68.183.136.243:5173",
+    "https://cocinasitinerantes.com",
+    "https://www.cocinasitinerantes.com",
 ]
 
 AUTH_USER_MODEL = 'credentials.CustomUser'
@@ -176,4 +176,5 @@ X_FRAME_OPTIONS = 'DENY'
 CSRF_TRUSTED_ORIGINS = [
     "http://68.183.136.243:5173",
     "https://cocinasitinerantes.com",
+    "https://www.cocinasitinerantes.com",
 ]
