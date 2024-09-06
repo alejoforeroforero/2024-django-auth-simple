@@ -15,6 +15,5 @@ services:
       - /etc/letsencrypt:/etc/letsencrypt:ro
     ports:
       - "8000:8000"
-      - "443:443"
     depends_on:
       - web
